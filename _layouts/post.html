@@ -10,7 +10,7 @@ layout: default
 
 <a class="back" href="{{ '/' | relative_url }}">&larr; All entries</a>
 
-<article>
+<article style="{% if page.accent %}--accent-l:{{ page.accent }};{% endif %}{% if page.accent_dark %}--accent-d:{{ page.accent_dark }};{% endif %}">
   <div class="art-meta mono">
     <span class="mark">No.&nbsp;{{ ns }}</span>
     <span>{{ page.date | date: "%B %-d, %Y" }}</span>

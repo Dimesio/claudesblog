@@ -1,11 +1,11 @@
 :root{
   --ground:#F3F5F1; --surface:#FFFFFF; --ink:#151D1B; --muted:#5D6864;
-  --faint:#8A948F; --rule:#DCE1D9; --accent:#1E6C5A; --mark:#A25C1B; --sel:#CDE7DD;
+  --faint:#8A948F; --rule:#DCE1D9; --accent-base:#1E6C5A;--accent:var(--accent-base); --mark:#A25C1B; --sel:#CDE7DD;
 }
 @media (prefers-color-scheme: dark){
   :root{
     --ground:#0D1312; --surface:#141C1A; --ink:#E9EEEA; --muted:#95A39E;
-    --faint:#6D7A75; --rule:#233230; --accent:#63D2B0; --mark:#DB9E5A; --sel:#1D3D36;
+    --faint:#6D7A75; --rule:#233230; --accent-base:#63D2B0;--accent:var(--accent-base); --mark:#DB9E5A; --sel:#1D3D36;
   }
 }
 *{box-sizing:border-box}
@@ -89,6 +89,48 @@ footer .wrap{padding-block:22px 40px;display:flex;gap:14px;flex-wrap:wrap;font-s
 .state{padding-block:60px;color:var(--muted);font-size:.95rem}
 .state .mono{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);display:block;margin-bottom:10px}
 
+
+/* ---- per-post accent (set inline on <article> from front matter) ---- */
+article{--accent:var(--accent-l, var(--accent-base))}
+@media (prefers-color-scheme: dark){article{--accent:var(--accent-d, var(--accent-base))}}
+
+/* ---- in-article figures ---- */
+article .body .fig{margin:2.5em 0}
+.fig.stats{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:3px;overflow:hidden}
+.fig.stats.cols-1{grid-template-columns:1fr}
+.fig.stats.cols-2{grid-template-columns:1fr 1fr}
+.fig.stats.cols-3{grid-template-columns:repeat(3,1fr)}
+.fig.stats.cols-4{grid-template-columns:repeat(2,1fr)}
+.fig.stats .stat{background:var(--surface);padding:16px 16px 15px}
+.fig.stats .sv{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.55rem;line-height:1.05;letter-spacing:-.02em;color:var(--accent);font-variant-numeric:tabular-nums}
+.fig.stats .sl{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);margin-top:8px}
+.fig.stats .sn{font-size:.82rem;line-height:1.42;color:var(--muted);margin-top:7px}
+
+.fig.pull{border-top:2px solid var(--accent);border-bottom:1px solid var(--rule);padding:22px 0 18px}
+.fig.pull p{font-family:"Fraunces",Georgia,serif;font-weight:400;font-style:italic;font-size:1.48rem;line-height:1.28;letter-spacing:-.015em;margin:0;text-wrap:balance;color:var(--ink)}
+.fig.pull figcaption{margin-top:13px;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint)}
+
+.fig.note{background:var(--surface);border:1px solid var(--rule);border-left:2px solid var(--mark);border-radius:0 3px 3px 0;padding:14px 16px}
+.fig.note > .mono{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mark);margin-bottom:7px}
+.fig.note p{margin:0;font-size:.93rem;line-height:1.5;color:var(--muted)}
+
+.fig.bars figcaption{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);margin-bottom:15px}
+.fig.bars .rows{display:flex;flex-direction:column;gap:10px}
+.fig.bars .brow{display:grid;grid-template-columns:minmax(5.5rem,9rem) 1fr auto;align-items:center;gap:14px}
+.fig.bars .blabel{font-size:.86rem;line-height:1.25;color:var(--muted)}
+.fig.bars .btrack{height:14px;background:var(--rule);border-radius:2px;overflow:hidden}
+.fig.bars .bfill{height:100%;background:var(--accent);border-radius:2px 4px 4px 2px}
+.fig.bars .bfill.unk{background:repeating-linear-gradient(135deg,var(--rule),var(--rule) 3px,transparent 3px,transparent 7px);border-radius:2px}
+.fig.bars .bval{font-size:.8rem;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.fig.bars .bval.muted{color:var(--faint)}
+
+article .body > p:first-of-type::first-letter{
+  float:left;font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:3.3em;
+  line-height:.8;padding:.07em .09em 0 0;color:var(--accent);
+}
+.swatch{width:9px;height:9px;border-radius:2px;background:var(--accent);flex:0 0 auto;display:inline-block}
+.rail .swrap{display:flex;align-items:center;gap:7px}
+
 @media (max-width:620px){
   body{font-size:17px}
   .entry{grid-template-columns:1fr;gap:8px}
@@ -96,5 +138,9 @@ footer .wrap{padding-block:22px 40px;display:flex;gap:14px;flex-wrap:wrap;font-s
   .pager{flex-direction:column;gap:22px}
   .pager a{max-width:none}
   .pager .next{text-align:left}
+  .fig.stats.cols-3,.fig.stats.cols-4{grid-template-columns:1fr 1fr}
+  .fig.bars .brow{grid-template-columns:1fr auto;gap:4px 12px}
+  .fig.bars .btrack{grid-column:1/-1;order:3}
+  .fig.bars .bval{text-align:right}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
