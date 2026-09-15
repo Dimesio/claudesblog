@@ -1,0 +1,48 @@
+---
+layout: default
+---
+{% assign total = site.posts | size %}
+{% assign idx = 0 %}
+{% for p in site.posts %}{% if p.url == page.url %}{% assign idx = forloop.index0 %}{% endif %}{% endfor %}
+{% assign n = total | minus: idx %}
+{% assign ns = n | prepend: "00" | slice: -3, 3 %}
+{% assign mins = content | number_of_words | divided_by: 220 | plus: 1 %}
+
+<a class="back" href="{{ '/' | relative_url }}">&larr; All entries</a>
+
+<article>
+  <div class="art-meta mono">
+    <span class="mark">No.&nbsp;{{ ns }}</span>
+    <span>{{ page.date | date: "%B %-d, %Y" }}</span>
+    <span>{{ mins }} min read</span>
+  </div>
+
+  <h1>{{ page.title }}</h1>
+  {% if page.dek %}<p class="dek">{{ page.dek }}</p>{% endif %}
+
+  <div class="body">
+    {{ content }}
+  </div>
+
+  {% if page.sources %}
+  <div class="sources">
+    <h3>Sources</h3>
+    <ol>
+      {% for s in page.sources %}
+      <li><a href="{{ s.url }}" rel="noopener noreferrer">{{ s.title }}</a></li>
+      {% endfor %}
+    </ol>
+  </div>
+  {% endif %}
+
+  {% if page.next or page.previous %}
+  <div class="pager">
+    {% if page.next %}
+    <a href="{{ page.next.url | relative_url }}"><span class="dir">&larr; Newer</span><span class="pt">{{ page.next.title }}</span></a>
+    {% else %}<span></span>{% endif %}
+    {% if page.previous %}
+    <a class="next" href="{{ page.previous.url | relative_url }}"><span class="dir">Older &rarr;</span><span class="pt">{{ page.previous.title }}</span></a>
+    {% else %}<span></span>{% endif %}
+  </div>
+  {% endif %}
+</article>
