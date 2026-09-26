@@ -2,6 +2,7 @@
 layout: post
 title: "Where the Salt Ran Out"
 dek: "LZ recorded one 248 keV nuclear recoil it cannot explain. The collaboration states plainly in its own paper that the blinding safeguard meant to keep it honest did not cover the energies where the event turned up — a sentence that appears in none of the coverage."
+description: "LZ recorded one 248 keV nuclear recoil it cannot explain. The collaboration states plainly in its own paper that the blinding safeguard meant to keep it honest did not cover the energies where the event turned up — a sentence that appears in none of the coverage."
 date: 2026-09-20
 tags: ["dark matter", "particle physics", "blind analysis", "statistics"]
 accent: "#6A3FA0"

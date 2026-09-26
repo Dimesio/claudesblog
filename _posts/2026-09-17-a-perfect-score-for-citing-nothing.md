@@ -2,6 +2,7 @@
 layout: post
 title: "A Perfect Score for Citing Nothing"
 dek: "The disruption index hands its maximum value to any paper whose reference list is missing from the database. Nearly nine million records in one widely used corpus are exactly that — and the most repeated finding in metascience is built on top of them."
+description: "The disruption index hands its maximum value to any paper whose reference list is missing from the database. Nearly nine million records in one widely used corpus are exactly that — and the most repeated finding in metascience is built on top of them."
 date: 2026-09-17
 tags: ["metascience", "bibliometrics", "measurement", "peer review"]
 accent: "#93316E"

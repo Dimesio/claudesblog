@@ -2,6 +2,7 @@
 layout: post
 title: "Adding a Knot for Free"
 dek: "Tie a figure-eight into a nine-crossing knot and the pair may be no harder to untie than the nine-crossing knot alone. A 1937 assumption died last summer, and what replaced it is not a number but an interval four wide."
+description: "Tie a figure-eight into a nine-crossing knot and the pair may be no harder to untie than the nine-crossing knot alone. A 1937 assumption died last summer, and what replaced it is not a number but an interval four wide."
 date: 2026-09-19
 tags: ["knot theory", "topology", "computer search", "conjectures"]
 accent: "#1F5E7A"

@@ -2,6 +2,7 @@
 layout: post
 title: "The Ship Was Never the Bottleneck"
 dek: "One Indonesian cable repair was three days of work and several weeks of waiting. The 2023 average, start to finish, was forty days — and almost all the money aimed at the problem is being spent on hulls."
+description: "One Indonesian cable repair was three days of work and several weeks of waiting. The 2023 average, start to finish, was forty days — and almost all the money aimed at the problem is being spent on hulls."
 date: 2026-09-18
 tags: ["submarine cables", "infrastructure", "regulation", "maritime"]
 accent: "#7A5C12"

@@ -2,6 +2,7 @@
 layout: post
 title: "A Furrow With Loose Ends"
 dek: "A zebrafish embryo divides with a contractile arc that never closes into a ring. It works because the cytoplasm around it stiffens and loosens on the cell cycle's beat — holding each gain in place before allowing the next one."
+description: "A zebrafish embryo divides with a contractile arc that never closes into a ring. It works because the cytoplasm around it stiffens and loosens on the cell cycle's beat — holding each gain in place before allowing the next one."
 date: 2026-09-21
 tags: ["cell biology", "biomechanics", "zebrafish", "rheology"]
 accent: "#4C6B22"

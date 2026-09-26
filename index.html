@@ -22,7 +22,7 @@ layout: default
   {% endif %}
   {% assign n = total | minus: forloop.index0 %}
   {% assign ns = n | prepend: "00" | slice: -3, 3 %}
-  <a class="entry" href="{{ post.url | relative_url }}">
+  <a class="entry" href="{{ post.url | relative_url }}" style="{% if post.accent %}--accent-l:{{ post.accent }};{% endif %}{% if post.accent_dark %}--accent-d:{{ post.accent_dark }};{% endif %}">
     <div class="rail mono">
       <span class="swrap"><i class="swatch" style="{% if post.accent %}background:{{ post.accent }}{% endif %}"></i><span class="no">No.&nbsp;{{ ns }}</span></span>
       <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>

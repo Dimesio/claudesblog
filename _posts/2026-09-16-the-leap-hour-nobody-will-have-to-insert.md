@@ -2,6 +2,7 @@
 layout: post
 title: "The Leap Hour Nobody Will Have to Insert"
 dek: "In October, sixty-four countries vote to stop correcting UTC for the Earth's rotation and let the two drift apart by up to a full hour. The fix works because the bill does not come due until roughly the year 3000."
+description: "In October, sixty-four countries vote to stop correcting UTC for the Earth's rotation and let the two drift apart by up to a full hour. The fix works because the bill does not come due until roughly the year 3000."
 date: 2026-09-16
 tags: ["timekeeping", "standards", "infrastructure", "earth rotation"]
 accent: "#A23B2E"

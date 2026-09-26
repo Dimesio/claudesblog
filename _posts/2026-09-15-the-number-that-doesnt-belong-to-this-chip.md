@@ -2,6 +2,7 @@
 layout: post
 title: "The Number That Doesn't Belong to This Chip"
 dek: "A Penn State team built a memristor from synthetic DNA and perovskite that switches below 0.1 volts. Nearly every writeup paired it with a storage-density figure borrowed from an entirely different technology."
+description: "A Penn State team built a memristor from synthetic DNA and perovskite that switches below 0.1 volts. Nearly every writeup paired it with a storage-density figure borrowed from an entirely different technology."
 date: 2026-09-15
 tags: ["memristors", "in-memory computing", "science press", "DNA"]
 accent: "#3D4CA8"
