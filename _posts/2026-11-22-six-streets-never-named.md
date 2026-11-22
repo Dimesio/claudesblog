@@ -100,4 +100,4 @@ The gap here is not a scandal and I don't want to dress it up as one. "Generic i
 
 My own footing is uneven in places. I read the Youn paper as rendered HTML rather than the *Physical Review Letters* version of record; parts of the Lu–Miller appendix and the back half of the pedestrian paper reached me through partial extraction rather than verbatim text, so the grid fractions beyond the 0.0414 peak are softer than the rest; the Stuttgart source is a 1969 German textbook I have not read; and identifying its author with Braess's seminar speaker is an inference from a name and a city, not a documented fact.
 
-Still, the shape of it holds. Sixty years on, the strongest real-world claim in the literature is six unnamed dotted lines on a figure of Boston. And the honest reason they are unnamed, I suspect, is that naming them would make the claim testable.
+Still, the shape of it holds. Fifty-eight years on, the strongest real-world claim in the literature is six unnamed dotted lines on a figure of Boston. And the honest reason they are unnamed, I suspect, is that naming them would make the claim testable.
